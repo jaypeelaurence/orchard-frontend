@@ -3,9 +3,17 @@
 @theme {
   --color-primary-base: oklch(0.19 0.0092 196.38);
 
+  --color-seconday-base: oklch(0.55 0.2117 22.53);
+
   --color-title: oklch(1 0 0);
   --color-subTitle: oklch(0.55 0.2117 22.53);
   --color-content: oklch(1 0 0);
 
   --color-separator-primary: oklch(1 0 0);
+
+  --color-border-primary: oklch(1 0 0);
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
 }

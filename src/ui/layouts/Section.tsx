@@ -1,35 +1,14 @@
-import { useState } from 'react';
+import { FC, PropsWithChildren } from 'react';
+import { cn } from '../../utils';
 
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-
-function Section() {
-  const [count, setCount] = useState(0);
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1 className="text-3xl text-primary-base font-bold underline">Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/Section.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  );
+interface PROPS extends PropsWithChildren {
+  className?: string;
 }
+
+const Section: FC<PROPS> = ({ children, className }) => (
+  <div className={cn('px-10', 'py-[100px]', className)}>
+    {children}
+  </div>
+);
 
 export default Section;

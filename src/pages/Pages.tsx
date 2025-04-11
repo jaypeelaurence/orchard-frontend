@@ -18,8 +18,9 @@ function Pages() {
     <Suspense fallback={<Loading />}>
       <Routes>
         {
-          _Routes.map(({ index, path, element }) =>
-            <Route  key={Math.random()}
+          _Routes.map(({ index, path, element }, _index) =>
+            <Route
+              key={_index}
               path={path}
               index={Boolean(index)}
               element={element?.()}

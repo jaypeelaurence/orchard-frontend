@@ -1,6 +1,6 @@
 import { lazy, ReactNode } from 'react';
 
-const Homepage = lazy(() => import('../modules/Homepage'));
+const Homepage = lazy(() => import('../modules/Homepage/Homepage'));
 
 export interface ROUTE {
   index?: boolean;

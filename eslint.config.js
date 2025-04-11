@@ -24,6 +24,7 @@ export default defineConfig([
       'linebreak-style': 2,
       'no-unused-vars': 2,
       'max-len': [2, 100],
+      'eol-last': ["error", "always"]
     }
   }
 ]);
