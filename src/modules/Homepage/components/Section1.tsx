@@ -55,6 +55,7 @@ function Section1() {
           'md:w-full',
           'lg:w-[362px]',
           'text-center',
+          'lg:text-left',
         )}>
           <Title>WHAT DOES COOKING MEAN?</Title>
           <Content>
