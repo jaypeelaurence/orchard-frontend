@@ -9,28 +9,33 @@ import image3 from '../../../assets/images/image3.png';
 function Section1() {
   return (
     <Section>
-      <div className={cn(
-        'flex',
-        'flex-col',
-        'md:flex-col',
-        'lg:flex-row',
-        'space-y-[30px]',
-        'md:space-y-[30px]',
-        'lg:space-x-[30px]',
-        'items-center',
-      )}>
-        <div className={cn(
-          'space-x-0',
-          'sm:space-x-0',
-          'md:space-x-[10px]',
-          'space-y-[10px]',
-          'sm:space-y-[10px]',
-          'md:space-y-0',
+      <div
+        className={cn(
           'flex',
           'flex-col',
-          'sm:flex-col',
-          'md:flex-row',
-        )}>
+          'md:flex-col',
+          'lg:flex-row',
+          'space-y-[30px]',
+          'lg:space-y-0',
+          'lg:space-x-[30px]',
+          'items-center',
+        )}
+      >
+        <div
+          data-aos="fade-right"
+          className={cn(
+            'space-x-0',
+            'sm:space-x-0',
+            'md:space-x-[10px]',
+            'space-y-[10px]',
+            'sm:space-y-[10px]',
+            'md:space-y-0',
+            'flex',
+            'flex-col',
+            'sm:flex-col',
+            'md:flex-row',
+          )}
+        >
           <Image
             alt='image 1'
             src={image1}
@@ -49,14 +54,17 @@ function Section1() {
             />
           </div>
         </div>
-        <section className={cn(
-          'space-y-[30px]',
-          'w-full',
-          'md:w-full',
-          'lg:w-[362px]',
-          'text-center',
-          'lg:text-left',
-        )}>
+        <section
+          data-aos="fade-left"
+          className={cn(
+            'space-y-[30px]',
+            'w-full',
+            'md:w-full',
+            'lg:w-[362px]',
+            'text-center',
+            'lg:text-left',
+          )}
+        >
           <Title>WHAT DOES COOKING MEAN?</Title>
           <Content>
             {

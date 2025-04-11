@@ -7,11 +7,7 @@ import Error from './Error';
 
 function Pages() {
   useEffect(() => {
-    AOS.init({
-      disable: false,
-      offset: 10,
-      duration: 550,
-    });
+    AOS.init();
   }, []);
 
   return (
