@@ -1,4 +1,4 @@
-import { Button, Content, Image, SubTitle, Title } from '../../../ui/components';
+import { Content, Image, SubTitle, Title } from '../../../ui/components';
 import { Section } from '../../../ui/layouts';
 import { cn } from '../../../utils';
 
@@ -38,16 +38,11 @@ const COLORS: COLOR[] = [
 
 const Color = ({ data }: DATA_COLOR) => (
   <section id={data?.title} className={cn('basis-1/3', 'space-y-[30px]')}>
-    <Button
-      type="button"
-      onClick={() => {}}
-    >
-      <Image
-        alt={`${data.title} ${data.description}`}
-        src={data.src}
-        className={cn('h-[300px] w-[375px]')}
-      />
-    </Button>
+    <Image
+      alt={`${data.title} ${data.description}`}
+      src={data.src}
+      className={cn('h-[300px] w-[375px]')}
+    />
     <div className={cn('space-y-[10px]')}>
       <SubTitle>
         {data.title}
