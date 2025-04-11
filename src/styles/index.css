@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary-base: oklch(0.72 0.11 178); /* green 60 */
+  --color-primary-base: oklch(0.19 0.0092 196.38);
+
+  --color-title: oklch(1 0 0);
+  --color-subTitle: oklch(0.55 0.2117 22.53);
+  --color-content: oklch(1 0 0);
+
+  --color-separator-primary: oklch(1 0 0);
 }
