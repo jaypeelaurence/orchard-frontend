@@ -19,7 +19,7 @@ function Button({ onClick, type, className, label, children }: PROPS) {
   return (
     <button
       type={type}
-      onClick={(e) => handleOnClick(e)}
+      onClick={handleOnClick}
       className={cn('cursor-pointer', className)}
     >
       {label ?? children}

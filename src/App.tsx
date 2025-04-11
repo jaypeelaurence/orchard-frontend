@@ -1,5 +1,10 @@
 import Pages from './pages';
+import { Modal } from './ui/partials';
 
-const App = () => <Pages />;
+const App = () => (
+  <Modal>
+    <Pages />
+  </Modal>
+);
 
 export default App;
