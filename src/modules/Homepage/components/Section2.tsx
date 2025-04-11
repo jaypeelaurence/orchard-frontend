@@ -1,9 +1,13 @@
-import { Content, SubTitle, Title } from '../../../ui/components';
+import { Button, Content, Image, SubTitle, Title } from '../../../ui/components';
 import { Section } from '../../../ui/layouts';
 import { cn } from '../../../utils';
 
+import red from '../../../assets/images/red.png';
+import green from '../../../assets/images/green.png';
+import white from '../../../assets/images/white.png';
+
 interface COLOR {
-  image: string;
+  src: string;
   title: string;
   description: string;
 }
@@ -14,18 +18,18 @@ interface DATA_COLOR {
 
 const COLORS: COLOR[] = [
   {
-    image: '',
+    src: red,
     title: 'Red',
     description: 'Red foods remind us of berries and soft fruits, so we anticipate a sweet taste.'
   },
   {
-    image: '',
+    src: green,
     title: 'Green',
     // eslint-disable-next-line max-len
     description: 'Fresh, zingy green colours are reminiscent of unripe fruit, promising sour or acid flavours'
   },
   {
-    image: '',
+    src: white,
     title: 'White',
     // eslint-disable-next-line max-len
     description: 'White foods evoke memories of salt and salty flavours, driving the expectation of a savoury treat.'
@@ -33,9 +37,18 @@ const COLORS: COLOR[] = [
 ];
 
 const Color = ({ data }: DATA_COLOR) => (
-  <section className={cn('basis-1/3', 'space-y-[30px]')}>
-    {data.image}
-    <div className={cn('')}>
+  <section id={data?.title} className={cn('basis-1/3', 'space-y-[30px]')}>
+    <Button
+      type="button"
+      onClick={() => {}}
+    >
+      <Image
+        alt={`${data.title} ${data.description}`}
+        src={data.src}
+        className={cn('h-[300px] w-[375px]')}
+      />
+    </Button>
+    <div className={cn('space-y-[10px]')}>
       <SubTitle>
         {data.title}
       </SubTitle>

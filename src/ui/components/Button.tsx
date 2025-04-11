@@ -1,22 +1,30 @@
-import { FC } from 'react';
+import { PropsWithChildren } from 'react';
 import { cn } from '../../utils';
 
-interface PROPS {
+interface PROPS extends PropsWithChildren {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any, no-unused-vars
   onClick: (e: any) => any;
   className?: string;
   type: 'button';
-  label: string;
+  label?: string;
 }
 
-const Button: FC<PROPS>= ({ onClick, type, className, label }) => (
-  <button
-    type={type}
-    onClick={onClick}
-    className={cn('cursor-pointer', className)}
-  >
-    {label}
-  </button>
-);
+function Button({ onClick, type, className, label, children }: PROPS) {
+  const handleOnClick = (e: unknown) => {
+    console.log(e, 'button clicked');
+
+    onClick(e);
+  };
+
+  return (
+    <button
+      type={type}
+      onClick={(e) => handleOnClick(e)}
+      className={cn('cursor-pointer', className)}
+    >
+      {label ?? children}
+    </button>
+  );
+};
 
 export default Button;
