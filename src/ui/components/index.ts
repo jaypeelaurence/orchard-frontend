@@ -1,5 +1,5 @@
 import Button from './Button';
-import Image from './_Image';
+import Image from './Image';
 import Title from './Title';
 import SubTitle from './SubTitle';
 import Content from './Content';
